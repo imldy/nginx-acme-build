@@ -120,7 +120,7 @@ jobs:
           cd nginx-$NGINX_VERSION
 
           BUILD_PATH=$(pwd)
-          CC_OPT_VALUE="-g -O2 -ffile-prefix-map=$BUILD_PATH=. -fstack-protector-strong -Wformat -Werror=format-security -Wp,-U_FORTIFY_SOURCE,-D_FORTIFY_SOURCE=2 -fPIC"
+          CC_OPT_VALUE="-g -O2 -ffile-prefix-map=$BUILD_PATH=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC"
 
           # Configure NGINX for a portable layout, linking against system libraries.
           # The ACME module is built as a dynamic module (`.so` file).
